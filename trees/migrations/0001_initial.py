@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
                 ('information', models.TextField(blank=True, null=True)),
                 ('medical_use', models.TextField(blank=True, null=True)),
                 ('image_link', models.ImageField(blank=True, null=True, upload_to=trees.models.tree_image_file_path)),
-                ('audio_link', models.FileField(blank=True, null=True, upload_to=trees.models.tree_audio_file_path)),
+                ('video_link', models.FileField(blank=True, null=True, upload_to=trees.models.tree_video_file_path)),
             ],
         ),
     ]
