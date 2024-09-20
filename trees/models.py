@@ -6,10 +6,10 @@ def tree_image_file_path(instance, filename):
     filename = f"{instance.common_name.lower().replace(' ', '_')}_image.{extension}"
     return os.path.join('tree_images/', filename)
 
-def tree_audio_file_path(instance, filename):
+def tree_video_file_path(instance, filename):
 
     extension = filename.split('.')[-1]
-    filename = f"{instance.common_name.lower().replace(' ', '_')}_audio.{extension}"
+    filename = f"{instance.common_name.lower().replace(' ', '_')}_video.{extension}"
     return os.path.join('tree_audio/', filename)
 
 class Tree(models.Model):
@@ -22,7 +22,7 @@ class Tree(models.Model):
     information = models.TextField(blank=True, null=True)
     medical_use = models.TextField(blank=True, null=True)
     image_link = models.ImageField(upload_to=tree_image_file_path, blank=True, null=True)
-    audio_link = models.FileField(upload_to=tree_audio_file_path, blank=True, null=True)
+    video_link = models.FileField(upload_to=tree_video_file_path, blank=True, null=True)
 
     def __str__(self):
         return self.common_name
