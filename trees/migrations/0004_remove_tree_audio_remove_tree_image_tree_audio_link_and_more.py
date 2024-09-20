@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='tree',
             name='audio_link',
-            field=models.FileField(blank=True, null=True, upload_to=trees.models.tree_audio_file_path),
+            field=models.FileField(blank=True, null=True, upload_to=trees.models.tree_video_file_path),
         ),
         migrations.AddField(
             model_name='tree',
