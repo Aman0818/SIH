@@ -10,7 +10,6 @@ from trees.models import Tree
 # User registration karega
 @api_view(['POST'])
 def user_create(request):
-    print(request.body)
     serializer = CustomUserSerializer(data=request.data)
     
     if serializer.is_valid():
